@@ -88,13 +88,8 @@ const checkFour = number => {
 const timeFun = num => {
     let hours = Math.floor(num / 60);
     let minutes = num % 60;
-
-    if (hours >= 0 && hours < 10) {
-        hours = String(hours).padStart(2, "0");
-    } 
-    if (minutes >= 0 && minutes < 10) {
-        minutes = String(minutes).padStart(2, "0");
-    } 
+    hours = String(hours).padStart(2, "0");
+    minutes = String(minutes).padStart(2, "0");
 
     return `${hours}:${minutes}`;
 }
@@ -109,18 +104,46 @@ const timeFun = num => {
 // Якщо нічого не ввели або натиснули Cancel,
 // Вивести в alert строку "Скасовано"
 // В іншому випадку вивести в alert рядок "Я вас не знаю"
-
-
-
 // Пароль перевіряти так:
 // Якщо введено пароль "Я головний",
 // то вивести в alert рядок "Добрий день!",
 // в іншому випадку вивести в alert рядок "Невірний пароль!"
 
 
+const checkLogin = login => {
+    console.log(login);
+    if (login === "Адмін") {
+        let password = prompt("Password");
+        
+        if (password === "Я головний") {
+        alert("Добрий день!");
+        return;
+        } else if (password === "") {
+            alert("Скасовано");
+            return;
+        }; 
+
+        alert("Невірний пароль!");
+        alert("Я вас не знаю");
+    }
+}
+
+// checkLogin(prompt());
+
+
 
 // Використайте цикл while, щоб вивести в console всі числа від 0 до 20 включно.
 
+const loop20 = () => {
+    let i = 0;
+    while(i <= 20) {
+        console.log(i);
+        i++;
+        
+    }
+}
+
+// loop20();
 
 
 // Напишіть функцію getNumbers(min, max), що приймає 2 параметри - 
@@ -130,25 +153,57 @@ const timeFun = num => {
 // Окрім цього, підрахуйте суму всіх парних чисел в цьому циклі
 // і поверніть її з функції.
 
-
+const getNumbers = (min, max) => {
+    let result = 0;
+    for (let i = max; i >= min; i--) {
+        console.log(i);
+        if (i % 2 === 0) {
+            result += i;
+        }
+    }
+    return result;
+}
+// console.log(getNumbers(1,100));
 
 // Напишіть функцію min(a, b), яка приймає 2 числа і повертає меньше з них.
 // Потрібно додати перевірку, що функція отримує саме числа, в іншому випадку
 // повертати з функції рядок - 'Not a number!'.
 
+const minNumber = (a,b) => {
+    if (typeof a !== "number" || typeof b !== "number") {
+        return "Not a number!";
+    }
+    return a>b?b:a;
+}
 
+// console.log(minNumber(10,5));
 
 // Напишіть функцію isAdult(age), яка  приймає число - вік користувача і повертає true, 
 // якщо параметр age більше чи дорівнює 18.
 // В іншому випадку вона запитує підтвердження через confirm 
 // і повертає його результат (true/false).
 
+const isAdult = age => {
+    return age >= 18?true:false || confirm("Confirm");
+}
 
+// console.log(isAdult(15));
 
 // Напишіть функцію fizzBuzz(num), яка приймає число і перевіряє кожне число від 1 до num:
 // Якщо число ділитися  без остачі на 3 - виводить в консоль 'fizz',
 // якщо ділиться  без остачі на 5 - виводить в консоль 'buzz',
 // якщо ділиться  без остачі і на 3, і на 5 - виводить в консоль 'fizzbuzz'.
 
+const fizzBuzz = num => {
+    for (let i = 1; i < num; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log("fizzbuzz");
+        }  else if (i % 3 === 0) {
+            console.log("fizz");
+        }  else if (i % 5 === 0) {
+            console.log("buzz");
+        } 
+    }
+}
 
-
+fizzBuzz(20);
