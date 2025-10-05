@@ -18,7 +18,7 @@ const checkTen = string => {
     };
 }
 
-// checkTen(prompt());
+checkTen(prompt('Будь ласка, введіть 10'));
 
 
 // У змінній min лежить випадкове число від 0 до 59.
@@ -45,7 +45,7 @@ const checkHour = number => {
     }
 }
 
-// checkHour(min);
+checkHour(min);
 
 
 // Змінна num може набувати 4 значення: '1', '2', '3' або '4' 
@@ -77,7 +77,7 @@ const checkFour = number => {
         }
 }
 
-// checkFour(Number(prompt()));
+checkFour(Number(prompt('Будь ласка, введіть число від 1 до 4, результат буде у консолі')));
 
 // Отримуйте від користувача число (кількість хвилин) через prompt
 // і виводьте у консоль рядок у форматі годин та хвилин.
@@ -94,7 +94,7 @@ const timeFun = num => {
     return `${hours}:${minutes}`;
 }
 
-// console.log(timeFun(Number(prompt())));
+console.log(timeFun(Number(prompt('Будь ласка, введіть хвилини'))));
 
 // Напишіть код, який запитуватиме у користувача
 // логін за допомогою prompt і виводить результат в консоль браузера
@@ -128,7 +128,7 @@ const checkLogin = login => {
     }
 }
 
-// checkLogin(prompt());
+checkLogin(prompt('Будь ласка, введіть Ващ логін'));
 
 
 
@@ -143,7 +143,7 @@ const loop20 = () => {
     }
 }
 
-// loop20();
+loop20();
 
 
 // Напишіть функцію getNumbers(min, max), що приймає 2 параметри - 
@@ -163,7 +163,7 @@ const getNumbers = (min, max) => {
     }
     return result;
 }
-// console.log(getNumbers(1,100));
+console.log(getNumbers(1,100));
 
 // Напишіть функцію min(a, b), яка приймає 2 числа і повертає меньше з них.
 // Потрібно додати перевірку, що функція отримує саме числа, в іншому випадку
@@ -176,7 +176,7 @@ const minNumber = (a,b) => {
     return a>b?b:a;
 }
 
-// console.log(minNumber(10,5));
+console.log(minNumber(10,5));
 
 // Напишіть функцію isAdult(age), яка  приймає число - вік користувача і повертає true, 
 // якщо параметр age більше чи дорівнює 18.
@@ -184,10 +184,10 @@ const minNumber = (a,b) => {
 // і повертає його результат (true/false).
 
 const isAdult = age => {
-    return age >= 18?true:false || confirm("Confirm");
+    return age >= 18?true:false || confirm("Будь ласка,підтвердіть, що Вам немає 18");
 }
 
-// console.log(isAdult(15));
+console.log(isAdult(18));
 
 // Напишіть функцію fizzBuzz(num), яка приймає число і перевіряє кожне число від 1 до num:
 // Якщо число ділитися  без остачі на 3 - виводить в консоль 'fizz',
