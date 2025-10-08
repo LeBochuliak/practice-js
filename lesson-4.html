@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice JavaScript</title>
+    <script type="module" crossorigin src="/practice-js/lesson-4.js"></script>
+    <link rel="modulepreload" crossorigin href="/practice-js/assets/modulepreload-polyfill-B5Qt9EMX.js">
+    <link rel="stylesheet" crossorigin href="/practice-js/assets/styles-Q9__a7LD.css">
+  </head>
+  <body>
+    <div class="container">
+
+        <a href="./index.html" target="_self">Back</a>
+  <!-- Task - 01 -->
+        <h1 id="title">Базові операції з DOM</h1>
+
+        <ul class="list">
+            <li data-topic="navigation">
+                <h3>Навігація по DOM</h3>
+                <p>
+                    Доступ до DOM починається з об'єкта document, з нього можна дістатися
+                    до будь-яких елементів.
+                </p>
+            </li>
+
+            <li data-topic="search">
+                <h3>Пошук елементів</h3>
+                <p>
+                    Група методів elem.querySelector* — це сучасний стандарт для пошуку
+                    елементів.
+                </p>
+            </li>
+
+            <li data-topic="props">
+                <h3 class="completed">Властивості та атрибути</h3>
+                <p>
+                    elem.textContent, elem.classList, elem.style, elem.hasAttribute(name),
+                    elem.getAttribute(name), elem.setAttribute(name, value),
+                    elem.removeAttribute(name)
+                </p>
+            </li>
+
+            <li data-topic="manipulation">
+                <h3>Створення та видалення елементів</h3>
+                <p>
+                    DOM API дозволяє не тільки вибирати або змінювати вже існуючі, але й
+                    видаляти, а також створювати нові елементи, після чого додавати їх в
+                    документ.
+                </p>
+            </li>
+        </ul>
+
+  <!-- Task - 03 -->
+        <p class="task-title">Task 3</p>
+        <form class="contact-form js-contact-form">
+            <input
+            name="userName"
+            type="text"
+            class="contact-form-input js-username-input"
+            data-length="8"
+            placeholder="Your name"
+            />
+
+            <label class="js-policy-label">
+                <input
+                type="checkbox"
+                name="accept"
+                class="contact-form-checkbox js-policy-checkbox"
+                />
+                    Я <span class="js-username-output">Anonymous</span> погоджуюсь із
+                    політикою конфіденційності
+            </label>
+
+            <button type="submit" class="contact-form-btn js-contact-form-submit">
+                Відправити
+            </button>
+        </form>
+
+  <!-- Task - 04 -->
+        <p class="task-title">Task 4</p>
+        <div>
+            <div class="box"></div>
+            <button class="js-decrease" id="decrease">Зменшити</button>
+            <button class="js-increase" id="increase">Збільшити</button>
+        </div>
+    </div>
+
+    
+  </body>
+</html>
